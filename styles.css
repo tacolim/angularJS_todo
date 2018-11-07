@@ -1,0 +1,58 @@
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0px auto;
+    }
+    
+    .app-header {
+    text-align: center;
+    font-size: 2em;
+    background: #a0ecff;
+    }
+
+    
+    .app-body {
+    margin-top: 40px;
+    }
+    
+    .done-true {
+    text-decoration: line-through;
+    color: grey;
+    }
+    
+    ul {
+    list-style: none;
+    padding-left: 0;
+    padding: 10px;
+    margin: auto;
+    }
+
+    ul li {
+    line-height: 32px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    }
+    
+    .todo-form {
+    padding: 10px;
+    text-align: center;
+    }
+    
+    input[type="text"] {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    height: 30px;
+    width: 100%;
+    max-width: 400px;
+    }
+    
+    .remove-btn {
+    text-align: center;
+    display: block;
+    margin: .5em auto;
+    }

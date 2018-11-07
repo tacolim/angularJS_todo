@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
 <body>
 
 <div ng-app="myApp" ng-controller="todoController">
-<p>Things I Need To Do:</p>
+<h1 class="app-header">Things I Need To Do:</h1>
 <ul>
-    <li ng-repeat="task in tasks">
+    <li ng-repeat="task in tasks track by $index">
         <input type="checkbox" ng-model="task.done"/>
         <span class="done-{{task.done}}">{{ task.text }}</span>
     </li>
 </ul>
-<form ng-submit>
-    <input ng-model="task" placeholder="New Task"/><button ng-click="add()">+</button>
+<button class="remove-btn" ng-click="remove()">Remove Completed Tasks</button>
+<form class="todo-form" ng-submit>
+    <input type="text" ng-model="task" placeholder="Add New Task"/><button ng-click="add()">+</button>
 </form>
-<button ng-click="remove()">Remove Completed Tasks</button>
 </div>
 
 <script src="myApp.js"></script>
 <script src="todoController.js"></script>
 
 </body>
+<link rel="stylesheet" type="text/css" href="styles.css" />
 </html>
