@@ -7,23 +7,21 @@
 </head>
 
 <body>
+    <div ng-app="myApp" ng-controller="todoController">
+        <h1 class="app-header">Things I Need To Do:</h1>
+        <ul>
+            <li ng-repeat="task in tasks track by $index">
+                <input type="checkbox" ng-model="task.done"/>
+                <span class="done-{{task.done}}">{{ task.text }}</span>
+            </li>
+        </ul>
+        <button class="remove-btn" ng-click="remove()">Remove Completed Tasks</button>
+        <form class="todo-form" ng-submit>
+            <input type="text" ng-model="task" placeholder="Add New Task"/><button class="add-btn" ng-click="add()">+</button>
+        </form>
+    </div>
 
-<div ng-app="myApp" ng-controller="todoController">
-<h1 class="app-header">Things I Need To Do:</h1>
-<ul>
-    <li ng-repeat="task in tasks track by $index">
-        <input type="checkbox" ng-model="task.done"/>
-        <span class="done-{{task.done}}">{{ task.text }}</span>
-    </li>
-</ul>
-<button class="remove-btn" ng-click="remove()">Remove Completed Tasks</button>
-<form class="todo-form" ng-submit>
-    <input type="text" ng-model="task" placeholder="Add New Task"/><button class="add-btn" ng-click="add()">+</button>
-</form>
-</div>
-
-<script src="myApp.js"></script>
-<script src="todoController.js"></script>
-
+    <script src="myApp.js"></script>
+    <script src="todoController.js"></script>
 </body>
 </html>
