@@ -10,8 +10,10 @@
     
     .app-header {
     text-align: center;
-    font-size: 2em;
-    background: #a0ecff;
+    font-size: 2.5em;
+    background: #7fd8db;
+    padding: 0.3em 0em;
+    border-radius: .8em 0;
     }
 
     
@@ -29,10 +31,11 @@
     padding-left: 0;
     padding: 10px;
     margin: auto;
+    font-size: 1.5em;
     }
 
     ul li {
-    line-height: 32px;
+    line-height: 2.5em;
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     }
     
@@ -40,7 +43,13 @@
     padding: 10px;
     text-align: center;
     }
+
+    input[type="checkbox"] {
+        width: 2em;
+        height: 2em;
+    }
     
+
     input[type="text"] {
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     border-top: 0px;
@@ -51,8 +60,26 @@
     max-width: 400px;
     }
     
+    ::placeholder {
+        font-size: 1.5em;
+    }
+
+    .add-btn {
+        text-align: center;
+        margin: .5em auto;
+        padding: .3em .5em;
+        font-size: 1.3em;
+        border-radius: .8em 0;
+        background-color: rgb(173, 173, 173);
+        }
+
     .remove-btn {
     text-align: center;
     display: block;
-    margin: .5em auto;
+    margin: .8em auto;
+    padding: .5em;
+    font-size: 1.3em;
+    border-radius: .8em 0;
+    background-color: #447577;
+    color: white;
     }
